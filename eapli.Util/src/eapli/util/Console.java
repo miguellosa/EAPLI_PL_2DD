@@ -20,6 +20,7 @@ import java.util.logging.Logger;
  */
 public class Console {
 
+    // TODO refactor to readLine
     static public String readLineFromConsole(String strPrompt) {
         try {
             System.out.println(strPrompt);
@@ -34,6 +35,7 @@ public class Console {
         }
     }
 
+    // TODO refactor to readInteger
     static public int readIntegerFromConsole(String strPrompt) {
         do {
             try {
@@ -48,6 +50,7 @@ public class Console {
         } while (true);
     }
 
+    // TODO refactor to readBoolean
     static public boolean readBooleanFromConsole(String strPrompt) {
         do {
             try {
@@ -64,6 +67,7 @@ public class Console {
         } while (true);
     }
 
+    // TODO refactor to readDate
     static public Date readDateFromConsole(String strPrompt) {
         do {
             try {
@@ -80,6 +84,7 @@ public class Console {
         } while (true);
     }
 
+    // TODO move to DateTime util class and rename to parseDate
     static public Date dateFromString(String strDate) {
         try {
 
