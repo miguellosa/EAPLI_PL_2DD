@@ -1,7 +1,7 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
+*/
 package eapli.util;
 
 import java.text.ParseException;
@@ -13,9 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Paulo Gandra Sousa
- */
+*
+* @author Paulo Gandra Sousa
+*/
 public /* static */ class DateTime {
 
     public static Calendar today() {
@@ -60,22 +60,22 @@ public /* static */ class DateTime {
     }
 
     /**
-     * returns the current month of the year
-     * 
-     * @return current month (1 - 12) of the year
-     */
+* returns the current month of the year
+*
+* @return current month (1 - 12) of the year
+*/
     public static int currentMonth() {
         return today().get(Calendar.MONTH) + 1 ;
     }
 
     /**
-     * Creates a new Calendar object set to a specific date
-     * 
-     * @param year the year
-     * @param month the month (1 - 12)
-     * @param day the day of the month
-     * @return 
-     */
+* Creates a new Calendar object set to a specific date
+*
+* @param year the year
+* @param month the month (1 - 12)
+* @param day the day of the month
+* @return
+*/
     public static Calendar newCalendarDate(int year, int month, int day) {
         Calendar date = new GregorianCalendar(year, month-1, day);
         return date;

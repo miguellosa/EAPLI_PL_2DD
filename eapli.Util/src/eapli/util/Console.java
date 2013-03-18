@@ -1,7 +1,7 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
+*/
 package eapli.util;
 
 import java.io.BufferedReader;
@@ -13,11 +13,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Paulo Gandra Sousa
- * 
- * based on code form Nuno Silva
- */
+*
+* @author Paulo Gandra Sousa
+*
+* based on code form Nuno Silva
+*/
 public class Console {
 
     static public String readLine(String prompt) {
