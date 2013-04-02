@@ -24,6 +24,9 @@ public class ExpenseTypeRepository implements IExpenseTypeRepository {
             throw new IllegalArgumentException();
         }
         listExpenseType.add(exptype);
-
+    }
+    
+    public List<ExpenseType> getList() {
+        return listExpenseType;
     }
 }
