@@ -14,4 +14,6 @@ import java.util.List;
 public interface IExpenseTypeRepository {
 
     void save(ExpenseType exptype);
+
+    public List<ExpenseType> getList();
 }
