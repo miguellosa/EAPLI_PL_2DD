@@ -10,5 +10,8 @@ package Model;
  */
 public class Cash extends PaymentMean {
     
-    public Cash(){}   
+    public Cash( String desc, PaymentType tipo)
+    {
+        super(desc, tipo);
+    }   
 }

@@ -4,19 +4,16 @@
  */
 package Model;
 
-/**
- *
- * @author i110311
- */
-public class Check {
+public class Check extends PaymentMean {
    
     private String banco;
     private int numero;
     
     public Check(){}
     
-    public Check(String banco,int n){
-     
+    public Check(String banco,int n, String desc, PaymentType tipo)
+    {
+        super(desc, tipo);
         if (banco.isEmpty() || n==0) throw new IllegalArgumentException(); 
         
         this.banco=banco;

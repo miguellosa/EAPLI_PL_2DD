@@ -15,8 +15,9 @@ public class Card extends PaymentMean {
     public Card()
     {
     }
-    public Card(String banco, int numero)
+    public Card(String banco, int numero, String desc, PaymentType tipo)
     {
+        super(desc, tipo);
         if (banco.isEmpty() || numero==0) throw new IllegalArgumentException();
         this.banco=banco;
         this.numero= numero;

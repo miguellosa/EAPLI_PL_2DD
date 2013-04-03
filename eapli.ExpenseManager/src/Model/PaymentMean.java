@@ -9,14 +9,14 @@ package Model;
  * @author i110311
  */
 public class PaymentMean {
-    public PaymentTypes tipo;
+    public PaymentType tipo;
     public String descricao;
     
     public PaymentMean()
     {    
     }
     
-    public PaymentMean(PaymentTypes tipo, String desc)
+    public PaymentMean(String desc,PaymentType tipo)
     {    
         if (tipo==null || desc.isEmpty()) throw new IllegalArgumentException();
         
