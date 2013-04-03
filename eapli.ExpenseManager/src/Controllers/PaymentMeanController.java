@@ -19,18 +19,18 @@ public class PaymentMeanController {
        public PaymentMeanController() {
     }
 
-    public void registerPaymentMean(String desc, String nome, int numero, String tipo) {
+    public void registerPaymentMean(String desc, String nome, String numero, String tipo) {
         
         PaymentMeanRepository repo = new PaymentMeanRepository();
         PaymentMean payMean=null;
         
-        if(tipo == "Card" || tipo == "card" || tipo == "CARD" )
+        if(tipo.equals("Card") || tipo.equals("card") || tipo.equals("CARD") )
         {
             payMean =new Card(nome, numero, desc,PaymentTypes.CARTAO);
-        }else if(tipo == "Check" || tipo == "check" || tipo == "CHECK")
+        }else if(tipo.equals("Check") || tipo.equals("check") || tipo.equals("CHECK"))
         {
             payMean =new Check(nome, numero, desc,PaymentTypes.CHEQUE);
-        }else if (tipo == "Cash" || tipo == "cash" || tipo == "CASH")
+        }else if (tipo.equals("Cash") || tipo.equals("cash") || tipo.equals("CASH"))
         {
             payMean =new Cash(desc,PaymentTypes.DINHEIRO);
         }

@@ -19,18 +19,19 @@ public class PaymentMeanRegisterUI {
         List<String> types= controller.getPaymentTypes(); 
         for (int i = 0; i < types.size(); i++)
         {
-            System.out.println("   "+i+" -> "+types.get(i));    
+            System.out.println(" -> "+types.get(i));    
          }
         String tipo = Console.readLine("->");
          
         String what = Console.readLine("Description:");
-        if(tipo!="Cash")
+        
+        if(!tipo.equals("Cash"))
         {
             String nome =  Console.readLine("Bank name: ");
-            int numero =  Console.readInteger("Number: ");
+            String numero =  Console.readLine("Number: ");
             controller.registerPaymentMean(what, nome, numero,tipo);
         }
-        controller.registerPaymentMean(what, "", -1,tipo);
+        else controller.registerPaymentMean(what, "", "",tipo);
 
         System.out.println("Payment mean recorded.");
     }

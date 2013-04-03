@@ -7,14 +7,14 @@ package Model;
 public class Check extends PaymentMean {
    
     private String banco;
-    private int numero;
+    private String numero;
     
     public Check(){}
     
-    public Check(String banco,int n, String desc, PaymentType tipo)
+    public Check(String banco ,String n, String desc, PaymentType tipo)
     {
         super(desc, tipo);
-        if (banco.isEmpty() || n==0) throw new IllegalArgumentException(); 
+        if (banco.isEmpty() || n.isEmpty()) throw new IllegalArgumentException(); 
         
         this.banco=banco;
         this.numero=n;
@@ -40,14 +40,14 @@ public class Check extends PaymentMean {
     /**
      * @return the numero
      */
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
     /**
      * @param numero the numero to set
      */
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
     

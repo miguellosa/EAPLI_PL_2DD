@@ -10,15 +10,15 @@ package Model;
  */
 public class Card extends PaymentMean {
     private String banco;
-    private int numero;
+    private String numero;
     
     public Card()
     {
     }
-    public Card(String banco, int numero, String desc, PaymentType tipo)
+    public Card(String banco, String numero, String desc, PaymentType tipo)
     {
         super(desc, tipo);
-        if (banco.isEmpty() || numero==0) throw new IllegalArgumentException();
+        if (banco.isEmpty() || numero.isEmpty()) throw new IllegalArgumentException();
         this.banco=banco;
         this.numero= numero;
    
@@ -41,14 +41,14 @@ public class Card extends PaymentMean {
     /**
      * @return the numero
      */
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
     /**
      * @param numero the numero to set
      */
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 }
