@@ -16,6 +16,8 @@ import java.util.Date;
 
 public class Expense {
     
+    Date dateocurred;
+    
     String description;
    
     BigDecimal amount;
@@ -32,6 +34,8 @@ public class Expense {
         }
         this.description = description;
         this.amount = amount;
+        this.dateocurred = dateOccurred;
+        
     }
     
     public Expense( String description, int year, int month, int day, BigDecimal amount) {
@@ -41,6 +45,14 @@ public class Expense {
     public BigDecimal getAmount() {
         return amount;
     }
-
+    
+    public Date getDate(){
+        return dateocurred;
+    }
+    
+    public void tostring(){
+        System.out.println("    Descricao: " + description + "\n    Montante: " + amount + "\n  Data: " + dateocurred.toString());
+    }
+    
    
 }
