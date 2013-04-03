@@ -4,10 +4,6 @@
  */
 package Model;
 
-/**
- *
- * @author i110311
- */
 public class PaymentMean {
     public PaymentType tipo;
     public String descricao;

@@ -14,6 +14,8 @@ public class MainMenu {
 
     public void mainLoop() {
         
+        
+        
         int option;
         do {
             System.out.println("===================");
@@ -22,6 +24,7 @@ public class MainMenu {
         
             System.out.println("1. Register an expense");
             System.out.println("2. Register an expense type");
+            System.out.println("3. Register an Payment Mean");
             System.out.println("6. Register new Income Type");
             System.out.println("0. Exit\n\n");
         
@@ -37,6 +40,10 @@ public class MainMenu {
                 case 2:
                     ExpenseTypeRegisterUI uit = new ExpenseTypeRegisterUI();
                     uit.mainLoop();
+                    break;
+                case 3:
+                    PaymentMeanRegisterUI ui3= new PaymentMeanRegisterUI();
+                    ui3.mainLoop();
                     break;
                 case 6:
                     IncomeTypeRegisterUI ui6 = new IncomeTypeRegisterUI();

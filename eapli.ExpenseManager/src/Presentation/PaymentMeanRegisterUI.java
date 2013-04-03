@@ -32,6 +32,6 @@ public class PaymentMeanRegisterUI {
         }
         controller.registerPaymentMean(what, "", -1,tipo);
 
-        System.out.println("expense type recorded.");
+        System.out.println("Payment mean recorded.");
     }
 }
