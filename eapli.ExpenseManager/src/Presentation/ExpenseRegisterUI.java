@@ -28,12 +28,12 @@ class ExpenseRegisterUI extends BaseUI {
     }
 
     @Override
-    protected BaseController controller() {
+    public BaseController controller() {
         return null;
     }
 
     @Override
-    protected void doshow() {
+    public void doshow() {
         PaymentMeanRepository meanRepo = new PaymentMeanRepository();
         //Obter a lista de meios de pagamento
         List<PaymentMean> meansList = meanRepo.getListPaymentMean();
@@ -76,7 +76,7 @@ class ExpenseRegisterUI extends BaseUI {
     }
 
     @Override
-    protected String headline() {
+    public String headline() {
         return "* * *  REGISTER AN EXPENSE  * * *\n";
     }
 }
