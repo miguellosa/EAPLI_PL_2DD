@@ -25,7 +25,7 @@ public abstract class BaseUI {
     }
     
     public void showHeadline(){
-        System.out.println("headline: "+headline());
+        System.out.println(headline());
     }
     
     public void showBalances(){

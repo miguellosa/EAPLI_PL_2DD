@@ -7,6 +7,7 @@ package Presentation;
 import Controllers.BaseController;
 import Controllers.ExpenseRegisterController;
 import Model.PaymentMean;
+import Model.PaymentType;
 import Persistence.PaymentMeanRepository;
 
 import eapli.util.Console;
@@ -28,7 +29,7 @@ class ExpenseRegisterUI extends BaseUI {
 
     @Override
     protected BaseController controller() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return null;
     }
 
     @Override
@@ -43,14 +44,10 @@ class ExpenseRegisterUI extends BaseUI {
             return;
         }
         
-        System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
-        
         String what = Console.readLine("Description:");
         Date date = Console.readDate("When:");
         double value = Console.readDouble("Amount:");
         BigDecimal amount = new BigDecimal(value);
-        //Registar meio de pagamento!!
-        
         
         //Listar meios de pagamento
         PaymentMean mean = null;
@@ -73,7 +70,6 @@ class ExpenseRegisterUI extends BaseUI {
             }
         }
         
-        ExpenseRegisterController controller = new ExpenseRegisterController();
         controller.registerExpense(what, date, amount, mean);
         
         System.out.println("Expense recorded.");
