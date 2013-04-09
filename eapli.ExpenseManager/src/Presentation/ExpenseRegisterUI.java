@@ -4,6 +4,7 @@
  */
 package Presentation;
 
+import Controllers.BaseController;
 import Controllers.ExpenseRegisterController;
 import Model.PaymentMean;
 import Persistence.PaymentMeanRepository;
@@ -17,9 +18,21 @@ import java.util.List;
  *
  * @author Paulo Gandra Sousa
  */
-class ExpenseRegisterUI {
+class ExpenseRegisterUI extends BaseUI {
+    
+    ExpenseRegisterController controller = new ExpenseRegisterController();
+    
     public void mainLoop() {
-        
+        show(); 
+    }
+
+    @Override
+    protected BaseController controller() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    protected void doshow() {
         PaymentMeanRepository meanRepo = new PaymentMeanRepository();
         //Obter a lista de meios de pagamento
         List<PaymentMean> meansList = meanRepo.getListPaymentMean();
@@ -36,6 +49,8 @@ class ExpenseRegisterUI {
         Date date = Console.readDate("When:");
         double value = Console.readDouble("Amount:");
         BigDecimal amount = new BigDecimal(value);
+        //Registar meio de pagamento!!
+        
         
         //Listar meios de pagamento
         PaymentMean mean = null;
@@ -62,5 +77,10 @@ class ExpenseRegisterUI {
         controller.registerExpense(what, date, amount, mean);
         
         System.out.println("Expense recorded.");
+    }
+
+    @Override
+    protected String headline() {
+        return "* * *  REGISTER AN EXPENSE  * * *\n";
     }
 }
