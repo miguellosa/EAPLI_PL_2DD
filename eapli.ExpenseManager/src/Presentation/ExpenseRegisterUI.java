@@ -23,8 +23,9 @@ class ExpenseRegisterUI extends BaseUI {
     
     ExpenseRegisterController controller = new ExpenseRegisterController();
     
-    public void mainLoop() {
-        show(); 
+    public void show() {
+        System.out.println(headline());
+        doshow();
     }
 
     @Override

@@ -38,7 +38,7 @@ public class MainMenu {
                     return;
                 case Expense_Register_UI:         //Option to regist an expense into the system
                     ExpenseRegisterUI ui = new ExpenseRegisterUI();
-                    ui.mainLoop();
+                    ui.show();
                     break;
                 case Expense_Type_Register_UI:         //Option to regist an expense type into the system
                     ExpenseTypeRegisterUI uit = new ExpenseTypeRegisterUI();

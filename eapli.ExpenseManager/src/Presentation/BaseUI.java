@@ -19,14 +19,12 @@ public abstract class BaseUI {
     protected abstract String headline();
     
     public void show(){
-        showHeadline();
-        doshow();
+        
+       
         //Para ser finalizado...... showBalances();
     }
     
-    public void showHeadline(){
-        System.out.println(headline());
-    }
+  
     
     public void showBalances(){
         /*sout  ---------------------------
