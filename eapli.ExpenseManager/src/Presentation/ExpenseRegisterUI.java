@@ -51,7 +51,7 @@ class ExpenseRegisterUI {
 
             int answer = Console.readInteger("Please choose a option");
 
-            if(answer <= meansList.size() || answer > 0 ){
+            if(answer <= meansList.size() && answer > 0 ){
 
                 notValid = false;
                 mean = meansList.get(answer-1);
