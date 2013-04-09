@@ -24,5 +24,5 @@ public class ExpenseRegisterController {
         IExpenseRepository repo = new ExpenseRepository();
         
         repo.save(expense);
-    }   
+    }     
 }

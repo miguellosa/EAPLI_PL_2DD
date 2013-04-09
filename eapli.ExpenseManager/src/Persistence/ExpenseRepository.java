@@ -25,7 +25,7 @@ public class ExpenseRepository  implements IExpenseRepository
       
     }
     
-    public static List<Expense> getLista(){
+    public List<Expense> getLista(){
         return listExpense;
     }
 }
