@@ -44,7 +44,7 @@ public class MainMenu {
                     break;
                 case Expense_Type_Register_UI:         //Option to regist an expense type into the system
                     ExpenseTypeRegisterUI uit = new ExpenseTypeRegisterUI();
-                    uit.mainLoop();
+                    uit.show();
                     break;
                 case Payment_Mean_Register_UI:         //Option to regist a mean of payment into the system
                     PaymentMeanRegisterUI ui3= new PaymentMeanRegisterUI();
