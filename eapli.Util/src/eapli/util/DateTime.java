@@ -101,4 +101,11 @@ public /* static */ class DateTime {
     public static Date parseDate(String aDateString) {
         return parseDate(aDateString, "dd-MM-yyyy");
     }
+    
+    public static int getMonth(Date data){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(data);
+        int month = cal.get(Calendar.MONTH)+1;
+        return month;
+    }
 }
