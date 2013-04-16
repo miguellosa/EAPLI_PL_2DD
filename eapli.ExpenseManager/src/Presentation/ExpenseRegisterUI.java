@@ -35,7 +35,7 @@ class ExpenseRegisterUI extends BaseUI {
 
     @Override
     public BaseController controller() {
-        return null;
+        return controller;
     }
 
     @Override
