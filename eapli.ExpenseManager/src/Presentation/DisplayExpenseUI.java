@@ -2,6 +2,7 @@ package Presentation;
 
 import Controllers.BaseController;
 import Controllers.DisplayExpenseController;
+import Model.Expense;
 import Model.ExpenseType;
 import Persistence.ExpenseRepository;
 import Persistence.ExpenseTypeRepository;
@@ -21,11 +22,12 @@ public class DisplayExpenseUI extends BaseUI {
     public void show() {
         headline();
         doshow();
+        showBalances();
     }
    
     @Override
-    protected String headline() {
-        return "CURRENT MONTHLY EXPENSE BY TYPE:\n";
+    protected void headline() {
+        System.out.println("CURRENT MONTHLY EXPENSE BY TYPE:\n");
     }
     
  @Override
@@ -47,6 +49,18 @@ public class DisplayExpenseUI extends BaseUI {
        }    
        
     }
+
+    @Override
+    protected void showBalances() {
+        System.out.println("This week's expenditures: ");
+        GastosSemanaisUI semui = new GastosSemanaisUI();
+        semui.listarGastosSemanais();
+        System.out.println("This month's expenditures: ");
+        GastosMensaisUI mesui = new GastosMensaisUI();
+        mesui.listarGastosMensais();
+    }
+
+    
 }
 
    

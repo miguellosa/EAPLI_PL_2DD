@@ -10,30 +10,16 @@ package Presentation;
  */
 
 import Controllers.*;
+import java.util.*;
+import Model.*;
 
 public abstract class BaseUI {
     
     
     protected abstract BaseController controller();
     protected abstract void doshow();
-    protected abstract String headline();
-    
-    public void show(){
-        
-       
-        //Para ser finalizado...... showBalances();
-    }
-    
-  
-    
-    public void showBalances(){
-        /*sout  ---------------------------
-        this week expenditure:
-        sout das cenas
-        sout |
-        sout this month expenditure
-        sout das cenas
-        */
-    }
+    protected abstract void headline();
+    protected abstract void showBalances();
+    protected abstract void show();
     
 }

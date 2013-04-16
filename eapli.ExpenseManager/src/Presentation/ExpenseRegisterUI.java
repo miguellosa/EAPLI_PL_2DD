@@ -26,9 +26,11 @@ class ExpenseRegisterUI extends BaseUI {
     
     ExpenseRegisterController controller = new ExpenseRegisterController();
     
+    @Override
     public void show() {
-        System.out.println(headline());
+        headline();
         doshow();
+        showBalances();
     }
 
     @Override
@@ -38,7 +40,7 @@ class ExpenseRegisterUI extends BaseUI {
 
     @Override
     public void doshow() {
-PaymentMeanRepository meanRepo = new PaymentMeanRepository();
+        PaymentMeanRepository meanRepo = new PaymentMeanRepository();
         ExpenseTypeRepository typeRepo = new ExpenseTypeRepository();
         
         //Obter a lista de tipos de despesa
@@ -119,7 +121,17 @@ PaymentMeanRepository meanRepo = new PaymentMeanRepository();
     }
 
     @Override
-    public String headline() {
-        return "* * *  REGISTER AN EXPENSE  * * *\n";
+    public void headline() {
+        System.out.println("* * *  REGISTER AN EXPENSE  * * *\n");
+    }
+
+    @Override
+    public void showBalances() {
+        System.out.println("This week's expenditures: ");
+        GastosSemanaisUI semui = new GastosSemanaisUI();
+        semui.listarGastosSemanais();
+        System.out.println("This month's expenditures: ");
+        GastosMensaisUI mesui = new GastosMensaisUI();
+        mesui.listarGastosMensais();
     }
 }

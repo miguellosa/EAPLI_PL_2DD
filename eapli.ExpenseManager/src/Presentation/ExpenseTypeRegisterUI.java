@@ -15,8 +15,10 @@ import eapli.util.*;
  */
 public class ExpenseTypeRegisterUI extends BaseUI {
 
-    public void mainLoop() {
-        show();
+    public void show() {
+        headline();
+        doshow();
+        showBalances();
     }
 
     @Override
@@ -35,7 +37,17 @@ public class ExpenseTypeRegisterUI extends BaseUI {
     }
 
     @Override
-    public String headline() {
-        return "* * * REGISTER AN EXPENSE TYPE * * *\n";
+    public void headline() {
+        System.out.println("* * *  REGISTER AN EXPENSE TYPE  * * *\n");
+    }
+
+    @Override
+    protected void showBalances() {
+        System.out.println("This week's expenditures: ");
+        GastosSemanaisUI semui = new GastosSemanaisUI();
+        semui.listarGastosSemanais();
+        System.out.println("This month's expenditures: ");
+        GastosMensaisUI mesui = new GastosMensaisUI();
+        mesui.listarGastosMensais();
     }
 }
