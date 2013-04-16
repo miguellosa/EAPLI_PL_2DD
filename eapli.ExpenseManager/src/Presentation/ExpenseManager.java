@@ -8,6 +8,7 @@ import Presentation.MainMenu;
 import eapli.util.Math;
 import Persistence.*;
 import eapli.bootstrap.ExpenseBootstrapper;
+import eapli.bootstrap.ExpenseTypeBootstrapper;
 import eapli.bootstrap.PaymentMeanBootstrapper;
 
 /**
@@ -20,6 +21,7 @@ public class ExpenseManager {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        ExpenseTypeBootstrapper e3 = new ExpenseTypeBootstrapper();
         ExpenseBootstrapper e=new ExpenseBootstrapper();
         PaymentMeanBootstrapper e2=new PaymentMeanBootstrapper();
         

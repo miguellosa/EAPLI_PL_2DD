@@ -5,6 +5,7 @@
 package Controllers;
 
 import Model.Expense;
+import Model.ExpenseType;
 import Model.PaymentMean;
 
 import java.math.BigDecimal;
@@ -19,8 +20,8 @@ public class ExpenseRegisterController {
     public ExpenseRegisterController() {
     }
 
-    public void registerExpense(String what, Date date, BigDecimal amount, PaymentMean mean) {
-        Expense expense = new Expense( what, date, amount, mean);
+    public void registerExpense(String what, Date date, BigDecimal amount, PaymentMean mean,ExpenseType type) {
+        Expense expense = new Expense( what, date, amount, mean,type);
         IExpenseRepository repo = new ExpenseRepository();
         
         repo.save(expense);
