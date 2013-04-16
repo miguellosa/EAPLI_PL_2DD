@@ -18,6 +18,7 @@ public class MainMenu {
         final int Expense_Type_Register_UI=2;
         final int Payment_Mean_Register_UI=3;
         final int Income_Type_Register_UI=6;
+        final int Consult_Expense_UI=7;
         
         int option;
         do {
@@ -29,6 +30,7 @@ public class MainMenu {
             System.out.println("2. Register an expense type");
             System.out.println("3. Register an Payment Mean");
             System.out.println("6. Register new Income Type");
+            System.out.println("7. Consult Expenses");
             System.out.println("0. Exit\n\n");
         
             option = Console.readInteger("Please choose a option");
@@ -42,7 +44,7 @@ public class MainMenu {
                     break;
                 case Expense_Type_Register_UI:         //Option to regist an expense type into the system
                     ExpenseTypeRegisterUI uit = new ExpenseTypeRegisterUI();
-                    uit.mainLoop();
+                    uit.show();
                     break;
                 case Payment_Mean_Register_UI:         //Option to regist a mean of payment into the system
                     PaymentMeanRegisterUI ui3= new PaymentMeanRegisterUI();
@@ -51,6 +53,10 @@ public class MainMenu {
                 case Income_Type_Register_UI:         //Option to regist an income type into the system
                     IncomeTypeRegisterUI ui6 = new IncomeTypeRegisterUI();
                     ui6.mainLoop();
+                    break;
+                case Consult_Expense_UI:
+                    ConsultExpenseUI ceui = new ConsultExpenseUI();
+                    ceui.loopConsultExpenses();
                     break;
             }
        }while (option != 0);
