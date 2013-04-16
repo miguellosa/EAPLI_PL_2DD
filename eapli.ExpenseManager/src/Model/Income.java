@@ -16,6 +16,7 @@ public class Income {
 
     String description;
     BigDecimal amount;
+    Date dateoccurred;
 
     protected Income() {
     }
@@ -30,6 +31,7 @@ public class Income {
         }
         this.description = description;
         this.amount = amount;
+        this.dateoccurred = dateOccurred;
     }
 
     public Income(String description, int year, int month, int day, BigDecimal amount) {
@@ -38,5 +40,11 @@ public class Income {
 
     public BigDecimal getAmount() {
         return amount;
+    }
+    
+    public void tostring(){
+        System.out.println("Description: " + description);
+        System.out.println("Date: " + dateoccurred);
+        System.out.println("Amout: " + amount + "\n");
     }
 }

@@ -24,4 +24,8 @@ public class IncomeRepository implements IIncomeRepository{
         listIncome.add(inc);
       
     }
+    
+    public static List<Income> getList(){
+        return listIncome;
+    }
 }
