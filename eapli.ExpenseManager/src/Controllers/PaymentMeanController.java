@@ -4,11 +4,11 @@
  */
 package Controllers;
 
-import Model.Card;
 import Model.Cash;
 import Model.Check;
+import Model.CreditCard;
+import Model.DebitCard;
 import Model.PaymentMean;
-import Model.PaymentType;
 import Model.PaymentTypes;
 import Persistence.PaymentMeanRepository;
 import java.util.ArrayList;
@@ -19,18 +19,29 @@ public class PaymentMeanController {
        public PaymentMeanController() {
     }
 
-    public void registerPaymentMean(String desc, String nome, String numero, String tipo) {
+    public void registerPaymentMean(String desc, String nome, String numero, String tipo, int credit) {
         
         PaymentMeanRepository repo = new PaymentMeanRepository();
         PaymentMean payMean=null;
+        
+        
+        /*
+         * "CC" == Credit CArd
+         * "DC" == DEbit card
+         * "CK" == Check
+         * "CA" == CASH
+        */
+        
         tipo=tipo.toUpperCase();
-        if(tipo.equals("CARD") )
+        if(tipo.equals("CC") )
         {
-            payMean =new Card(nome, numero, desc,PaymentTypes.CARTAO);
-        }else if( tipo.equals("CHECK"))
+            payMean =new CreditCard(nome, numero, desc,PaymentTypes.CARTAO_CREDITO,credit);
+        }else if(tipo.equals("DC")){
+            payMean =new DebitCard(nome, numero, desc,PaymentTypes.CARTAO_CREDITO);
+        }else if( tipo.equals("CK"))
         {
             payMean =new Check(nome, numero, desc,PaymentTypes.CHEQUE);
-        }else if (tipo.equals("CASH"))
+        }else if (tipo.equals("CA"))
         {
             payMean =new Cash(desc,PaymentTypes.DINHEIRO);
         }
@@ -48,7 +59,8 @@ public class PaymentMeanController {
     {
         List<String> tipos= new ArrayList<String>();
         
-        tipos.add("Card");
+        tipos.add("Credit Card");
+        tipos.add("Debit Card");
         tipos.add("Check");
         tipos.add("Cash");
         return tipos;

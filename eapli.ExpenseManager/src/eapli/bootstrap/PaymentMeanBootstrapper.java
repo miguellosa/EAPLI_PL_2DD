@@ -16,7 +16,7 @@ public class PaymentMeanBootstrapper {
     
     static {
         PaymentMeanRepository repo = new PaymentMeanRepository();
-        repo.save(new PaymentMean("O meu cartao", PaymentTypes.CARTAO));
+        repo.save(new PaymentMean("O meu cartao", PaymentTypes.CARTAO_DEBITO));
         repo.save(new PaymentMean("O meu cheque", PaymentTypes.CHEQUE));
     }
     
