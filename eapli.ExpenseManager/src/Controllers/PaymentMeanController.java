@@ -23,14 +23,14 @@ public class PaymentMeanController {
         
         PaymentMeanRepository repo = new PaymentMeanRepository();
         PaymentMean payMean=null;
-        
-        if(tipo.equals("Card") || tipo.equals("card") || tipo.equals("CARD") )
+        tipo=tipo.toUpperCase();
+        if(tipo.equals("CARD") )
         {
             payMean =new Card(nome, numero, desc,PaymentTypes.CARTAO);
-        }else if(tipo.equals("Check") || tipo.equals("check") || tipo.equals("CHECK"))
+        }else if( tipo.equals("CHECK"))
         {
             payMean =new Check(nome, numero, desc,PaymentTypes.CHEQUE);
-        }else if (tipo.equals("Cash") || tipo.equals("cash") || tipo.equals("CASH"))
+        }else if (tipo.equals("CASH"))
         {
             payMean =new Cash(desc,PaymentTypes.DINHEIRO);
         }
