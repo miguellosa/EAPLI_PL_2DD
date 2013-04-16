@@ -15,7 +15,7 @@ import java.util.Date;
  */
 
 public class Expense {
-    
+    //atributos da classe
     Date dateocurred;
     
     String description;
