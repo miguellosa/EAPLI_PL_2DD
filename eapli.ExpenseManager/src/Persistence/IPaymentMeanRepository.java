@@ -11,5 +11,5 @@ import Model.PaymentMean;
  * @author i110311
  */
 public interface IPaymentMeanRepository {
-    void save(PaymentMean payment);
+    boolean save(PaymentMean payment);
 }

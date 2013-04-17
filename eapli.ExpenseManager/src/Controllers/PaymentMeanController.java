@@ -19,11 +19,20 @@ public class PaymentMeanController {
        public PaymentMeanController() {
     }
 
-    public void registerPaymentMean(String desc, String nome, String numero, String tipo, int credit) {
+    public boolean registerPaymentMean(String desc, String nome, String numero, String tipo, int credit) {
+        
+        //testar argumento
+        // String nulas ou vazias
+        if (desc == null || desc.isEmpty()|| nome == null || nome.isEmpty() || numero  == null || numero.isEmpty() || tipo == null || tipo.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        // Credito menor que zero
+        if (credit < 0) {
+            throw new IllegalArgumentException();
+        }
         
         PaymentMeanRepository repo = new PaymentMeanRepository();
         PaymentMean payMean=null;
-        
         
         /*
          * "CC" == Credit CArd
@@ -46,7 +55,7 @@ public class PaymentMeanController {
             payMean =new Cash(desc,PaymentTypes.DINHEIRO);
         }
         
-        repo.save(payMean);
+        return repo.save(payMean);
     }   
     
     public List<PaymentMean> getListPaymentMean()

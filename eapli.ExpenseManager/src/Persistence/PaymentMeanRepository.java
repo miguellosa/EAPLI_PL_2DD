@@ -20,10 +20,11 @@ public class PaymentMeanRepository implements IPaymentMeanRepository {
 
     public PaymentMeanRepository() {}
     
-    public void save(PaymentMean payment)
+    public boolean save(PaymentMean payment)
     {
         if (payment==null) throw new IllegalArgumentException();
         getListPaymentMean().add(payment);
+        return true;
       
     }
       /**
