@@ -15,6 +15,8 @@ import eapli.util.*;
  */
 public class ExpenseTypeRegisterUI extends BaseUI {
 
+     ExpenseTypeRegisterController controller = new ExpenseTypeRegisterController();
+    
     public void show() {
         headline();
         doshow();
@@ -23,14 +25,13 @@ public class ExpenseTypeRegisterUI extends BaseUI {
 
     @Override
     public BaseController controller() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return controller;
     }
 
     @Override
     public void doshow() {
         String what = Console.readLine("Description:");
 
-        ExpenseTypeRegisterController controller = new ExpenseTypeRegisterController();
         controller.registerExpenseType(what);
 
         System.out.println("expense type recorded.");
@@ -44,10 +45,8 @@ public class ExpenseTypeRegisterUI extends BaseUI {
     @Override
     protected void showBalances() {
         System.out.println("This week's expenditures: ");
-        GastosSemanaisUI semui = new GastosSemanaisUI();
-        semui.listarGastosSemanais();
+        controller.listarBalancosSemanais();
         System.out.println("This month's expenditures: ");
-        GastosMensaisUI mesui = new GastosMensaisUI();
-        mesui.listarGastosMensais();
+        controller.listarBalancosMensais();
     }
 }

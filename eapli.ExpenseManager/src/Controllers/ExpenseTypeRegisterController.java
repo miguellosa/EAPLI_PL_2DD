@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author i110242 and i110230
  */
-public class ExpenseTypeRegisterController {
+public class ExpenseTypeRegisterController extends BaseController {
     
     private IExpenseTypeRepository repo = new ExpenseTypeRepository();
     
