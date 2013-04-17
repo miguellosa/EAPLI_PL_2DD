@@ -128,10 +128,8 @@ class ExpenseRegisterUI extends BaseUI {
     @Override
     public void showBalances() {
         System.out.println("This week's expenditures: ");
-        GastosSemanaisUI semui = new GastosSemanaisUI();
-        semui.listarGastosSemanais();
+        controller.listarBalancosSemanais();
         System.out.println("This month's expenditures: ");
-        GastosMensaisUI mesui = new GastosMensaisUI();
-        mesui.listarGastosMensais();
+        controller.listarBalancosMensais();
     }
 }

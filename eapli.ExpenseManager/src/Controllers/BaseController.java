@@ -8,6 +8,7 @@ import java.util.*;
 import Model.*;
 import Persistence.*;
 import Controllers.*;
+import Presentation.*;
 
 /*
  *
@@ -19,6 +20,15 @@ public abstract class BaseController {
         
     }
     
+    public void listarBalancosMensais(){
+        GastosMensaisUI mesui = new GastosMensaisUI();
+        mesui.listarGastosMensais();
+    }
+    
+    public void listarBalancosSemanais(){
+        GastosSemanaisUI semui = new GastosSemanaisUI();
+        semui.listarGastosSemanais();
+    }
 //    public BigDecimal getThisMonthExpenditure(){
 //        
 //    }
