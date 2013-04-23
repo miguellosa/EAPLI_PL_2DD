@@ -23,11 +23,11 @@ public class DTOExpenseType {
         listExpenses = secondList;
     }  
     
-    static public List<ExpenseType> getListExpenseType(){
+    public List<ExpenseType> getListExpenseType(){
         return listExpenseType;
     }
     
-    static public List<Expense> getListExpenses(){
+    public List<Expense> getListExpenses(){
         return listExpenses;
     }
 }
