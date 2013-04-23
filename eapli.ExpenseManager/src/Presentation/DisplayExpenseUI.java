@@ -39,15 +39,14 @@ public class DisplayExpenseUI extends BaseUI {
     public void doshow() {
        
        DisplayExpenseController controller = new DisplayExpenseController();
-       List<ExpenseType> expenseTypesList = controller.getTypesExpenseList();
+       /*List<ExpenseType> expenseTypesList = controller.getTypesExpenseList();
        
        System.out.println("Select an expense type:\n");
         
        for (int i=0;i<expenseTypesList.size();i++)
        {
            System.out.println(i+1+" - "+expenseTypesList.get(i).getDescription()+"\n");
-       }    
-       
+       }   */ 
     }
 
     @Override
@@ -58,15 +57,6 @@ public class DisplayExpenseUI extends BaseUI {
         System.out.println("This month's expenditures: ");
         GastosMensaisUI mesui = new GastosMensaisUI();
         mesui.listarGastosMensais();
-    }
-
-    
-}
-
-   
-
-
-  
-
-    
+    }    
+}  
 
