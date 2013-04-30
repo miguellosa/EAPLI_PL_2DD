@@ -11,7 +11,7 @@ and open the template in the editor.
     <!--
             H2 embeded database on local folder
             -->
-    
+    <!-- Classes -->
     <class>eapli.expensemanager.Model.Expense</class>
     <class>eapli.expensemanager.Model.ExpenseType</class>
     <class>eapli.expensemanager.Model.Income</class>
