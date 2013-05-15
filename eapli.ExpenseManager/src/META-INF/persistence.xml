@@ -20,7 +20,7 @@ and open the template in the editor.
       <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
       <property name="hibernate.connection.password" value=""/>
   
-      <property name="hibernate.connection.url" value="jdbc:h2:C:\Users\TEMP.DEI.000\Downloads\EAPLI\EAPLI_PL_2DD\db\expenses"/>
+      <property name="hibernate.connection.url" value="jdbc:h2:C:\Users\i110815\Documents\EAPLI_PL_2DD\db\expenses"/>
       <property name="hibernate.hbm2ddl.auto" value="update"/>
       <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
     </properties>
