@@ -4,28 +4,21 @@
  */
 package Controllers;
 
-import Model.ExpenseType;
-
-import Persistence.*;
-import java.util.List;
+import Model.*;
+import Persistence.jpa.ExpenseTypeRepositoryImpl;
 
 /**
  *
- * @author i110242 and i110230
+ * @author i110230
  */
 public class ExpenseTypeRegisterController extends BaseController {
+    public ExpenseTypeRegisterController(){
+    }    
     
-    private IExpenseTypeRepository repo = new ExpenseTypeRepository();
-    
-    public ExpenseTypeRegisterController() {
-    }
-
-    public void registerExpenseType(String what) {
-        ExpenseType expensetype = new ExpenseType(what);
-        repo.save(expensetype);
-    }
-    
-    public List<ExpenseType> GetAllExpenseTypes() {
-        return repo.getList();
+    public void registerExpenseType(String shortName, String Descr){
+        ExpenseType expenseType = new ExpenseType(shortName,Descr);
+        ExpenseTypeRepositoryImpl repo;
+        repo = new ExpenseTypeRepositoryImpl();
+        repo.save(expenseType);
     }
 }

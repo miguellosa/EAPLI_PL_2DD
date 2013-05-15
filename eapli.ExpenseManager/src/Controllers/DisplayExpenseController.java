@@ -4,13 +4,13 @@
  */
 package Controllers;
 
-import Controllers.ExpenseTypeRegisterController;
+import Persistence.inmemory.ExpenseTypeRegisterController;
 import Controllers.ExpenseController;
 import Model.DTOExpenseType;
 import Model.Expense;
 import Model.ExpenseType;
 import Model.RecordExpense;
-import Persistence.ExpenseTypeRepository;
+import Persistence.inmemory.ExpenseTypeRepository;
 import java.math.BigDecimal;
 import java.util.List;
 

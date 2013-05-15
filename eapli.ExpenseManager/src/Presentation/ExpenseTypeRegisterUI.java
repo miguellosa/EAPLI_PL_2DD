@@ -30,9 +30,10 @@ public class ExpenseTypeRegisterUI extends BaseUI {
 
     @Override
     public void doshow() {
+        String shortName = Console.readLine("Short Name:");
         String what = Console.readLine("Description:");
 
-        controller.registerExpenseType(what);
+        controller.registerExpenseType(shortName, what);
 
         System.out.println("expense type recorded.");
     }

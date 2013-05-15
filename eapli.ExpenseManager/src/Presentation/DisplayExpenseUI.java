@@ -5,7 +5,7 @@ import Controllers.DisplayExpenseController;
 import Model.Expense;
 import Model.ExpenseType;
 import Persistence.ExpenseRepository;
-import Persistence.ExpenseTypeRepository;
+import Persistence.inmemory.ExpenseTypeRepository;
 import Persistence.IExpenseRepository;
 import Persistence.IExpenseTypeRepository;
 import eapli.util.Console;

@@ -9,7 +9,7 @@ import Controllers.ExpenseRegisterController;
 import Model.ExpenseType;
 import Model.PaymentMean;
 import Model.PaymentType;
-import Persistence.ExpenseTypeRepository;
+import Persistence.inmemory.ExpenseTypeRepository;
 import Persistence.PaymentMeanRepository;
 
 import eapli.util.Console;

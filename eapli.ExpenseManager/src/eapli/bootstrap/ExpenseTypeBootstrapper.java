@@ -4,6 +4,7 @@
 */
 package eapli.bootstrap;
 
+import Persistence.inmemory.ExpenseTypeRepository;
 import Model.ExpenseType;
 import Persistence.*;
 
@@ -14,11 +15,11 @@ import Persistence.*;
 public class ExpenseTypeBootstrapper {
     
     static {
-        IExpenseTypeRepository repo = new ExpenseTypeRepository();
-        repo.save(new ExpenseType("Alimentação"));
-        repo.save(new ExpenseType("Lazer"));
-        repo.save(new ExpenseType("Vestuario"));
-        repo.save(new ExpenseType("Multimedia"));
+//        IExpenseTypeRepository repo = new ExpenseTypeRepository();
+//        repo.save(new ExpenseType("Alimentação"));
+//        repo.save(new ExpenseType("Lazer"));
+//        repo.save(new ExpenseType("Vestuario"));
+//        repo.save(new ExpenseType("Multimedia"));
     }
     
 }
