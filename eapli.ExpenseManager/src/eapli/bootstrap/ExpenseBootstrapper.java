@@ -8,7 +8,7 @@ import Model.Expense;
 import Model.ExpenseType;
 import Model.PaymentMean;
 import Model.PaymentTypes;
-import Persistence.ExpenseRepository;
+import Persistence.inmemory.ExpenseRepository;
 import Persistence.IExpenseRepository;
 import java.math.BigDecimal;
 import java.math.RoundingMode;

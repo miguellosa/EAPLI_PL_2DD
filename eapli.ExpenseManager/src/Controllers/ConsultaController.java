@@ -4,7 +4,7 @@
  */
 package Controllers;
 
-import Persistence.ExpenseRepository;
+import Persistence.inmemory.ExpenseRepository;
 import Model.Expense;
 import java.util.ArrayList;
 import java.util.List;

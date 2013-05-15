@@ -5,7 +5,7 @@
 package Controllers;
 
 import Model.Income;
-import Persistence.IncomeRepository;
+import Persistence.inmemory.IncomeRepository;
 import java.util.List;
 
 /**
