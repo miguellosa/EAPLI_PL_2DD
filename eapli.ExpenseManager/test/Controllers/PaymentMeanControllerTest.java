@@ -4,7 +4,7 @@
  */
 package Controllers;
 
-import Persistence.PaymentMeanRepository;
+import Persistence.inmemory.PaymentMeanRepository;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;

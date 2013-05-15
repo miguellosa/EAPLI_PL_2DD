@@ -10,7 +10,7 @@ import Model.CreditCard;
 import Model.DebitCard;
 import Model.PaymentMean;
 import Model.PaymentTypes;
-import Persistence.PaymentMeanRepository;
+import Persistence.inmemory.PaymentMeanRepository;
 import java.util.ArrayList;
 import java.util.List;
 

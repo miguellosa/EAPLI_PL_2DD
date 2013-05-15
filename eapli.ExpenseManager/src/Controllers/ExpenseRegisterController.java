@@ -4,6 +4,7 @@
  */
 package Controllers;
 
+import Persistence.inmemory.ExpenseRepository;
 import Model.Expense;
 import Model.ExpenseType;
 import Model.PaymentMean;

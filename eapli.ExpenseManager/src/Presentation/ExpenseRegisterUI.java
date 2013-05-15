@@ -10,7 +10,7 @@ import Model.ExpenseType;
 import Model.PaymentMean;
 import Model.PaymentType;
 import Persistence.inmemory.ExpenseTypeRepository;
-import Persistence.PaymentMeanRepository;
+import Persistence.inmemory.PaymentMeanRepository;
 
 import eapli.util.Console;
 import java.math.BigDecimal;
