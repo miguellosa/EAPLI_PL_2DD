@@ -35,7 +35,11 @@ public abstract class JpaRepository<T, PK extends Serializable> {
         ParameterizedType genericSuperClass = (ParameterizedType) getClass().getGenericSuperclass();
         this.entityClass = (Class<T>) genericSuperClass.getActualTypeArguments()[0];
     }
-
+    
+    public T read (PK id)
+    {
+        return this.getEntityManager().find(entityClass, id);
+    }
     public T save(T entity) {
         if (entity == null) {
             throw new IllegalArgumentException();

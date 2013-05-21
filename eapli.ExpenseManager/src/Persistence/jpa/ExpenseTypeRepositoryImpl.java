@@ -13,28 +13,20 @@ import javax.persistence.*;
  *
  * @author i110230
  */
-public class ExpenseTypeRepositoryImpl implements ExpenseTypeRepository {
-    
-    @PersistenceUnit
-    static protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("expensesPU");
-    
-    protected EntityManager getEntityManager(){
-        EntityManager entityManager = emf.createEntityManager();
-        return entityManager;
-    }
-    
-    EntityManager manager = getEntityManager();
+public class ExpenseTypeRepositoryImpl extends JpaRepository<ExpenseType, String> implements ExpenseTypeRepository {
     
     public ExpenseType findOrCreate(String key, String description){
         if(key == null || key.trim().length() == 0){
             throw new IllegalArgumentException();
         }
         
-        assert manager != null;
+        
+        EntityManager em = getEntityManager();
+        assert em != null;
         
         ExpenseType expenseType;
         
-        Query q = manager.createQuery("SELECT et FROM ExpenseType et WHERE et.id = :type").setParameter("type",key);
+        Query q = em.createQuery("SELECT et FROM ExpenseType et WHERE et.id = :type").setParameter("type",key);
         
         try{
             expenseType = (ExpenseType) q.getSingleResult();
@@ -45,19 +37,10 @@ public class ExpenseTypeRepositoryImpl implements ExpenseTypeRepository {
         return expenseType;
     }
    
-    @Override
-    public ExpenseType save(ExpenseType expenseType){
-        manager.getTransaction().begin();
-        manager.persist(expenseType);
-        manager.getTransaction().commit();
-        manager.close();
-        
-        return expenseType;
-    }
     
     @Override
     public ExpenseType findForName(String key){
-        throw new UnsupportedOperationException("Not supported yet.");
+        return super.read(key);
     }
     
     
