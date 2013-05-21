@@ -13,7 +13,7 @@ public interface RepositoryFactory {
     
     //SavingPlanRepository savingPlanRepository();
     
-    ExpenseRepository expenseRepository();
+   // ExpenseRepository expenseRepository();
     
     ExpenseTypeRepository expenseTypeRepository();
     
