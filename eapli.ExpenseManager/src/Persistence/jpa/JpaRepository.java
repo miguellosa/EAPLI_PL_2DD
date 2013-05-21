@@ -20,7 +20,7 @@ import javax.persistence.PersistenceUnit;
 public abstract class JpaRepository<T, PK extends Serializable> {
 
     @PersistenceUnit
-    static protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("eapli.expensemanagerPU");
+    static protected EntityManagerFactory emf = Persistence.createEntityManagerFactory("expensesPU");
     EntityManager entityManager;
 
     protected EntityManager getEntityManager() {
