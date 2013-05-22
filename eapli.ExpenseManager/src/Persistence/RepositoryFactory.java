@@ -19,7 +19,7 @@ public interface RepositoryFactory {
     
 //    IncomeRepository incomeRepository();
 //    
-//    IncomeTypeRepository incomeTypeRepository();
+    IncomeTypeRepository incomeTypeRepository();
 //    
 //    public PaymentMeanRepository paymentMeanrepository();
     
