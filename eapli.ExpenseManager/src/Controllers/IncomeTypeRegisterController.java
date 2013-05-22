@@ -5,6 +5,7 @@
 package Controllers;
 
 import Persistence.inmemory.IncomeTypeRepository;
+import Persistence.jpa.IncomeTypeRepositoryImpl;
 import Model.IncomeType;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -14,7 +15,7 @@ import Persistence.*;
  *
  * @author Luis Marques
  */
-public class IncomeTypeRegisterController {
+public class IncomeTypeRegisterController extends BaseController{
 
     public IncomeTypeRegisterController() {
     }
@@ -22,8 +23,8 @@ public class IncomeTypeRegisterController {
     public void registerIncomeType(String name, String description) {
         IncomeType inctype = new IncomeType(name, description);
 
-        IIncomeTypeRepository incomeTypeRepo = new IncomeTypeRepository();
+        IncomeTypeRepositoryImpl repo = new IncomeTypeRepositoryImpl();
 
-        incomeTypeRepo.save(inctype);
+        repo.save(inctype);
     }
 }
