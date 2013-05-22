@@ -56,7 +56,7 @@ public class MainMenu {
                     break;
                 case Income_Type_Register_UI:         //Option to regist an income type into the system
                     IncomeTypeRegisterUI ui6 = new IncomeTypeRegisterUI();
-                    ui6.mainLoop();
+                    ui6.show();
                     break;
                 case Consult_Expense_UI:
                     ConsultExpenseUI ceui = new ConsultExpenseUI();
