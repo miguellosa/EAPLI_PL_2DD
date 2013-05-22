@@ -4,12 +4,18 @@
  */
 package Model;
 
+import javax.persistence.*;
+
 /**
  *
  * @author Luis Marques
  */
+
+@Entity
 public class IncomeType {
-    
+    @Id
+    @GeneratedValue
+    private Long id;
     String name;
     String description;
     
