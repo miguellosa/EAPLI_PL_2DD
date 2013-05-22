@@ -1,30 +1,52 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package Presentation;
 
-import Controllers.ExpenseRegisterController;
+import Controllers.BaseController;
 import Controllers.IncomeTypeRegisterController;
-
-import eapli.util.Console;
-import java.math.BigDecimal;
-import java.util.Date;
+import eapli.util.*;
 
 /**
  *
- * @author Luis Marques
+ * @author Grupo 6
  */
-public class IncomeTypeRegisterUI {
-      public void mainLoop() {
-        System.out.println("* * *  REGISTER A INCOME TYPE  * * *\n");
-        
-        String name = Console.readLine("Name:");
-        String description = Console.readLine("Description:");
-        
-        IncomeTypeRegisterController controller = new IncomeTypeRegisterController();
-        controller.registerIncomeType(name,description); //register income type
-        
-        System.out.println("income type recorded.");
+
+public class IncomeTypeRegisterUI extends BaseUI {
+
+     IncomeTypeRegisterController controller = new IncomeTypeRegisterController();
+
+     
+    public void show() {
+        headline();
+        doshow();
+        showBalances();
+    }
+
+    @Override
+    public BaseController controller() {
+        return controller;
+    }
+
+    @Override
+    public void doshow() {
+        String shortName = Console.readLine("Name:");
+        String what = Console.readLine("Description:");
+
+        controller.registerIncomeType(shortName, what);
+
+        System.out.println("Income type recorded.");
+    }
+
+    @Override
+    public void headline() {
+        System.out.println("* * *  REGISTER AN INCOME TYPE  * * *\n");
+    }
+
+    @Override
+    protected void showBalances() {
+        System.out.println("This week's expenditures: ");
+        controller.listarBalancosSemanais();
+        System.out.println("This month's expenditures: ");
+        controller.listarBalancosMensais();
     }
 }
